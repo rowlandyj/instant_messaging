@@ -1,6 +1,6 @@
-before do
-  @user ||= User.find(session[:user_id])
-end
+# before do
+#   @user ||= User.find(session[:user_id])
+# end
 
 get '/' do
   # Look in app/views/index.erb
