@@ -20,7 +20,16 @@
   <title>Flizzard Life.</title>
 </head>
 <body>
-  <header class="title_bar">Flizzard Life.</header>
+  <header class="title_bar"><span class="title_logo">Flizzard Life.</span>
+      <span class="login_links">
+    <% if false %>
+      Thanks for logging in
+    <% else %>
+      <a href="/login">Login</a>
+      <a href="/signup">Signup</a>
+    <% end %>
+    </span>
+  </header>
   <div class="box">
   <%= yield %>
   </div>
