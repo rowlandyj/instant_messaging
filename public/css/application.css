@@ -72,3 +72,6 @@ header{
   float: right;
 }
 
+form, h2 {
+  text-align: center;
+}

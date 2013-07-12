@@ -1,0 +1,11 @@
+%h2 Welcome to the Login Page
+%form#login{:action => "/login", :method => "post"}
+  %p 
+    %input{:type => "text", :name => "login[email]", :placeholder => "E-Mail"}
+  %p
+    %input{:type => "password", :name => "login[password]", :placeholder => "Password"}
+  %p
+    %input{:type => "submit", :value => "Log In!"}
+
+
+  
