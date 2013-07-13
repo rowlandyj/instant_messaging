@@ -14,40 +14,24 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-  <script src="http://js.pusher.com/2.1/pusher.min.js"></script>
-   <script src="http://js.pusher.com/2.1/pusher.min.js" type="text/javascript"></script>
-   <script type="text/javascript">
-    // Enable pusher logging - don't include this in production
-    Pusher.log = function(message) {
-      if (window.console && window.console.log) {
-        window.console.log(message);
-      }
-    };
+    <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="/favicon.png" />
 
-    var pusher = new Pusher('689254ed9305f00ed841');
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
-      alert(data.message);
-    });
-  </script>
-  <link href='http://fonts.googleapis.com/css?family=Sonsie+One' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="/favicon.png" />
-
-  <title>Flizzard Life.</title>
-</head>
-<body>
-  <header class="title_bar"><span class="title_logo">Flizzard Life.</span>
+    <title>Flizzard Life.</title>
+  </head>
+  <body>
+    <header class="title_bar"><span class="title_logo">Flizzard Life.</span>
       <span class="login_links">
-    <% if false %>
-      Thanks for logging in
-    <% else %>
-      <a href="/login">Login | </a>
-      <a href="/signup">Signup</a>
-    <% end %>
-    </span>
-  </header>
-  <div class="box">
-  <%= yield %>
-  </div>
-</body>
-</html>
+        <% if false %>
+        Thanks for logging in
+        <% else %>
+        <a href="/login">Login | </a>
+        <a href="/signup">Signup</a>
+        <% end %>
+      </span>
+    </header>
+    <div class="box">
+      <%= yield %>
+    </div>
+  </body>
+  </html>

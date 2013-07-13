@@ -1,3 +1,7 @@
+before do
+  @user = User.find(session[:user_id]) if session[:user_id]
+end
+
 get '/' do
   haml :index, :layout_engine => :erb
 end
@@ -20,14 +24,13 @@ end
 post '/signup' do
   begin
     user = User.create(params[:user])
-    redirect '/somewhere'
+    redirect '/chat'
   rescue
-    "I roll back."
+    redirect '/signup'
   end
 end
 
-get '/somewhere' do 
-  ' somethinggg '
+get '/chat' do
   require 'pusher'
 
   Pusher.url = "http://689254ed9305f00ed841:81af06251707b86ba97c@api.pusherapp.com/apps/49336"
