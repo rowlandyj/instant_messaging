@@ -74,8 +74,12 @@ h2{
 
 #signup{
   text-align: right;
-  width: 50%;
-  margin: auto;
+  margin-right: 25%;
+}
+
+#login{
+  text-align: right;
+  margin-right: 25%;
 }
 
 .login_links{
