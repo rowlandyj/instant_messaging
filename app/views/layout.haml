@@ -1,0 +1,25 @@
+!!!! 5
+%head
+  %link{rel: "stylesheet", href: "/css/normalize.css"}
+  %link{rel: "stylesheet", href: "/css/application.css"}
+  %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+  %script{src: "/js/application.js"}
+  %link{href: 'http://fonts.googleapis.com/css?family=Sonsie+One', rel: 'stylesheet', type: 'text/css'}
+  %link{rel: 'shortcut icon', href: "/favicon.png"}
+  %title Flizzard Life
+%body
+  %header.title_bar
+    %span.title_logo
+      %a{href: "/"}
+        Flizzard Life
+    %span.login_links
+      - if current_user?
+        you are #{@current_user.nick_name}
+      - else
+        %a{href: "/login"}
+          Login
+        %a{href: "/signup"}
+          Signup
+  .box= yield
+
+

@@ -23,7 +23,7 @@
     <header class="title_bar"><span class="title_logo"><a href="/">Flizzard Life.</a></span>
       <span class="login_links">
         <% if current_user? %>
-        Thanks for logging in <%= @user.name %>
+        You are <%= @current_user.nick_name %>
         <% else %>
         <a href="/login">Login | </a>
         <a href="/signup">Signup</a>

@@ -1,17 +1,17 @@
 before do
-  @user = User.find(session[:user_id]) if session[:user_id]
+  @current_user = User.find(session[:user_id]) if session[:user_id]
 end
 
 get '/' do
-  haml :index, :layout_engine => :erb
+  haml :index
 end
 
 get '/login' do
-  haml :login, :layout_engine => :erb, :layout => !request.xhr?
+  haml :login, :layout => !request.xhr?
 end
 
 get '/signup' do
-  haml :signup, :layout_engine => :erb, :layout => !request.xhr?
+  haml :signup, :layout => !request.xhr?
 end
 
 post '/login' do
@@ -35,5 +35,5 @@ get '/chat' do
   Pusher['chat'].trigger('my_event', {
     message: 'WAKA WAKA'
     })
-  haml :chat, :layout_engine => :erb, :layout => !request.xhr?
+  haml :chat, :layout => !request.xhr?
 end
