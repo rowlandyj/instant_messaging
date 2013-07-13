@@ -24,15 +24,14 @@ end
 
 post '/signup' do
   user = User.create(params[:user])
+  session[:user_id] = user.id
   redirect '/chat'
 end
 
 get '/chat' do
   require 'pusher'
-
   Pusher.url = "http://689254ed9305f00ed841:81af06251707b86ba97c@api.pusherapp.com/apps/49336"
-
-  Pusher['test_channel'].trigger('my_event', {
+  Pusher['chat'].trigger('my_event', {
     message: 'WAKA WAKA'
     })
   haml :chat, :layout_engine => :erb, :layout => !request.xhr?

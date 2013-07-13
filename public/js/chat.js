@@ -8,3 +8,10 @@ var channel = pusher.subscribe('test_channel');
 channel.bind('my_event', function(data) {
   alert(data.message);
 });
+
+$(function() {
+  var pusher = new Pusher('YOUR_APP_KEY');
+  var chatWidget = new PusherChatWidget(pusher, {
+    chatEndPoint: 'pusher-realtime-chat-widget/src/php/chat.php'
+  });
+});
