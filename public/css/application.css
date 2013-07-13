@@ -1,5 +1,5 @@
 body{
-    background-color: #237AA9;
+  background-color: #237AA9;
 }
 
 .box{
@@ -93,6 +93,59 @@ h2{
 }
 
 #status{
+  margin-top: 1.5em;
   color: green;
 }
 
+.chat_window{
+  display: block;
+  margin: auto;
+  height: 70vh;
+  width: 90%;
+  overflow-y: auto;
+  background-color: white;
+  -moz-box-shadow: inset 0 0 9px -3px #000;
+  -webkit-box-shadow: inset 0 0 9px -3px #000;
+  box-shadow: inset 0 0 9px -3px #000;
+}
+
+.chat_input{
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+textarea{
+  width: 80%;
+}
+
+chat_submit{
+  display: block;
+  margin: 1em 0 auto auto;
+}
+
+.button.blue {
+border-color: #0076a3;
+background: #49b3fc;
+background: -moz-linear-gradient(top, #76c7ff 0%, #237AA9 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#76c7ff), color-stop(100%,#237AA9));
+background: -webkit-linear-gradient(top, #76c7ff 0%,#237AA9 100%);
+background: -o-linear-gradient(top, #76c7ff 0%,#237AA9 100%);
+background: -ms-linear-gradient(top, #76c7ff 0%,#237AA9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76c7ff', endColorstr='#237AA9',GradientType=0 );
+background: linear-gradient(top, #76c7ff 0%,#237AA9 100%);
+color: #fff !important;
+text-shadow: 0 -1px 0 rgba(0,0,0,.1);
+}
+.button.blue:hover { background: #76c7ff; }
+.button.red:hover { background: #fb4e55; }
+
+.button {
+ border: 1px solid #AAAAAA;
+ border-radius: 5px 5px 5px 5px;
+ box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 -1px 0 rgba(255, 255, 255, 0.3) inset;
+ display: inline-block;
+ font: 100% Arial,Helvetica,sans-serif;
+ text-decoration: none !important;
+ vertical-align: middle;
+}

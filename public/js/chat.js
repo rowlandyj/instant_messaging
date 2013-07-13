@@ -1,6 +1,8 @@
 $(function() {
   // create new pusher
-  var pusher = new Pusher('689254ed9305f00ed841', {encrypted: true});
+  var pusher = new Pusher('689254ed9305f00ed841');
+  // set default channel
+  var channel = pusher.channel("flizzychat");
   // check for overages
   pusher.connection.bind( 'error', function( err ) {
     if( err.data.code === 4004 ) {
@@ -9,6 +11,6 @@ $(function() {
   });
   // show connection status in status div
   pusher.connection.bind('state_change', function(states) {
-  $('div#status').text("Pusher's current state is " + states.current);
-});
+    $('div#status').text("Pusher's current state is " + states.current);
+  });
 });
