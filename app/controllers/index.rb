@@ -23,12 +23,8 @@ post '/login' do
 end
 
 post '/signup' do
-  begin
-    user = User.create(params[:user])
-    redirect '/chat'
-  rescue
-    redirect '/signup'
-  end
+  user = User.create(params[:user])
+  redirect '/chat'
 end
 
 get '/chat' do
@@ -39,4 +35,5 @@ get '/chat' do
   Pusher['test_channel'].trigger('my_event', {
     message: 'WAKA WAKA'
     })
+  haml :chat, :layout_engine => :erb, :layout => !request.xhr?
 end

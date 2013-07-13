@@ -1,20 +1,4 @@
-  <script type="text/javascript">
-    // Enable pusher logging - don't include this in production
-    Pusher.log = function(message) {
-      if (window.console && window.console.log) {
-        window.console.log(message);
-      }
-    };
-    var pusher = new Pusher('689254ed9305f00ed841');
-    var channel = pusher.subscribe('test_channel');
-    channel.bind('my_event', function(data) {
-      alert(data.message);
-    });
-    </script>
-
-<script src="pusher-realtime-chat-widget/src/js/PusherChatWidget.js"></script>
-<link href="pusher-realtime-chat-widget/src/pusher-chat.css" rel="stylesheet" type="text/css" />
 %script{src: "http://js.pusher.com/2.1/pusher.min.js"}
 %script{src: "pusher-realtime-chat-widget/src/js/PusherChatWidget.js"}
-%link{href: "pusher-realtime-chat-widget/src/pusher-chat.css" rel: "stylesheet" type: "text/css""}
+%link{href: "pusher-realtime-chat-widget/src/pusher-chat.css", rel: "stylesheet", type: "text/css"}
 %h1 chat
