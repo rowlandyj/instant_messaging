@@ -63,9 +63,19 @@ header{
   text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.74);
 }
 
+h2{
+  text-align: center;
+}
+
 .title_logo{
   font-size: 2.5em;
   width: 55%;
+}
+
+#signup{
+  text-align: right;
+  width: 50%;
+  margin: auto;
 }
 
 .login_links{
@@ -76,6 +86,3 @@ header{
   font-size: 1.2em;
 }
 
-form, h2 {
-  text-align: center;
-}

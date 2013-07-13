@@ -19,6 +19,7 @@ post '/login' do
   if user.authenticate(params[:login][:password])
     session[:user_id] = user.id
   end
+  redirect '/'
 end
 
 post '/signup' do

@@ -1,12 +1,16 @@
 %h2 Welcome to the Sign Up Page
 %form#signup{:action => "/signup", :method => "post"}
-  %p 
-    %input{:type => "text", :name => "user[email]", :placeholder => "E-Mail"}
-  %p 
-    %input{:type => "text", :name => "user[real_name]", :placeholder => "Name"}
-  %p 
-    %input{:type => "text", :name => "user[nick_name]", :placeholder => "Nick-Name"}
   %p
-    %input{:type => "password", :name => "user[password]", :placeholder => "Password"}
+    Electronic Mail:
+    %input{:type => "text", :name => "user[email]", :placeholder => "zee@goodbitches.com"}
+  %p
+    Name:
+    %input{:type => "text", :name => "user[real_name]", :placeholder => "Zee"}
+  %p
+    Nick-Name:
+    %input{:type => "text", :name => "user[nick_name]", :placeholder => "Molly/January"}
+  %p
+    Password:
+    %input{:type => "password", :name => "user[password]", :placeholder => "beards989"}
   %p
     %input{:type => "submit", :value => "Create Account!"}
