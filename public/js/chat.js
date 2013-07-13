@@ -9,7 +9,7 @@
 //   alert(data.message);
 // });
 $(function() {
-  var pusher = new Pusher('YOUR_APP_KEY');
+  var pusher = new Pusher('689254ed9305f00ed841');
   var chatWidget = new PusherChatWidget(pusher, {
     chatEndPoint: 'pusher-realtime-chat-widget/src/php/chat.php'
   });

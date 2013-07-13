@@ -30,10 +30,6 @@ post '/signup' do
 end
 
 get '/chat' do
-  require 'pusher'
-  Pusher.url = "http://689254ed9305f00ed841:81af06251707b86ba97c@api.pusherapp.com/apps/49336"
-  Pusher['chat'].trigger('my_event', {
-    message: 'WAKA WAKA'
-    })
+
   haml :chat, :layout => !request.xhr?
 end

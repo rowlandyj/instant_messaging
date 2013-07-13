@@ -1,5 +1,5 @@
-/ = if @user
-%h2 Welcome to Flizzard Life, please sign up to Kneel before Zee
-
-%div
+- if current_user?
+  %h2 Welcome to Flizzard Life #{@current_user.nick_name}
+-else
+  %h2 Welcome to Flizzard Life, please sign up to Kneel before Zee
 
