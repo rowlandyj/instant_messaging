@@ -18,7 +18,7 @@ require 'erb'
 require 'haml'
 require 'pusher'
 require 'sinatra'
-
+# Application keys, not pushed to github, find them youself.
 require_relative '../keys.rb'
 
 if development?
