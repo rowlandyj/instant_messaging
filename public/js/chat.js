@@ -1,16 +1,14 @@
-// Pusher.log = function(message) {
-//   if (window.console && window.console.log) {
-//     window.console.log(message);
-//   }
-// };
-// var pusher = new Pusher('689254ed9305f00ed841');
-// var channel = pusher.subscribe('test_channel');
-// channel.bind('my_event', function(data) {
-//   alert(data.message);
-// });
 $(function() {
-  var pusher = new Pusher('689254ed9305f00ed841');
-  var chatWidget = new PusherChatWidget(pusher, {
-    chatEndPoint: 'pusher-realtime-chat-widget/src/php/chat.php'
+  // create new pusher
+  var pusher = new Pusher('689254ed9305f00ed841', {encrypted: true});
+  // check for overages
+  pusher.connection.bind( 'error', function( err ) {
+    if( err.data.code === 4004 ) {
+      log('>>> detected limit error');
+    }
   });
+  // show connection status in status div
+  pusher.connection.bind('state_change', function(states) {
+  $('div#status').text("Pusher's current state is " + states.current);
+});
 });

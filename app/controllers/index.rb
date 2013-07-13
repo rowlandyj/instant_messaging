@@ -30,6 +30,5 @@ post '/signup' do
 end
 
 get '/chat' do
-
   haml :chat, :layout => !request.xhr?
 end
