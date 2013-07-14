@@ -33,3 +33,9 @@ get '/chat' do
 
   haml :chat, :layout => !request.xhr?
 end
+
+get '/logout' do
+  session.clear
+  @current_user = nil
+  redirect '/'
+end
