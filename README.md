@@ -1,4 +1,5 @@
-sinatra_skeleton
+Flizzard Social Hub with instant messaging
 ================
 
-Sinatra skeleton from dev bootcamp
+This is a pusher powered chat client with bcrypt login and user story posting.
+Plans for a CMS are underway
