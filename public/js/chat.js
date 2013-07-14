@@ -13,4 +13,8 @@ $(function() {
   pusher.connection.bind('state_change', function(states) {
     $('div#status').text("Pusher's current state is " + states.current);
   });
+  // method for debugging message send
+  channel.bind('my-event', function(data) {
+    alert('An event was triggered with message: ' + data.message);
+  });
 });
