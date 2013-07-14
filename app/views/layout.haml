@@ -8,6 +8,12 @@
   %link{rel: 'shortcut icon', href: "/favicon.png"}
   %title Flizzard Life
 %body
+  -if current_user?
+    %nav
+      %a{href: "home"    } home -
+      %a{href: "/chat"   } chat -
+      %a{href: "post/new"} new post -
+      %a{href: "/logout" } logout
   %header.title_bar
     %span.title_logo
       %a{href: "/"}

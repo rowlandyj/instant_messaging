@@ -4,4 +4,7 @@ $(document).ready(function() {
   //   $.post('/login', $(this).serialize()).done(function(response){
   //   });
   // });
+
+  // menu slide down on page load
+  $("nav").slideDown("slow");
 });
