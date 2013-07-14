@@ -16,7 +16,7 @@ body{
 }
 
 nav{
-  background-color: #DDDDDD;
+  background: #DDDDDD;
   position: fixed;
   right: 10%;
   top: 0;
@@ -143,12 +143,6 @@ textarea{
   width: 80%;
 }
 
-<<<<<<< HEAD
-chat_submit{
-  display: block;
-  margin: 1em 0 auto auto;
-}
-
 .button.blue {
   border-color: #0076a3;
   background: #49b3fc;
@@ -163,8 +157,9 @@ chat_submit{
   text-shadow: 0 -1px 0 rgba(0,0,0,.1);
 }
 
-.button.blue:hover { background: #76c7ff; }
-.button.red:hover { background: #fb4e55; }
+.button.blue:hover{
+  background: #76c7ff;
+}
 
 .button {
  border: 1px solid #AAAAAA;
