@@ -16,10 +16,8 @@ require 'active_record'
 require 'logger'
 require 'erb'
 require 'haml'
-require 'pusher'
 require 'sinatra'
 # Application keys, not pushed to github, find them youself.
-require_relative '../keys.rb'
 
 if development?
   require "sinatra/reloader"
@@ -38,7 +36,3 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
-# pusher
-Pusher.app_id = APP_ID
-Pusher.key =    KEY
-Pusher.secret = SECRET
