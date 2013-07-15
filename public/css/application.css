@@ -15,9 +15,12 @@ body{
   margin: -.2em auto;
 }
 
+.chat_window p{
+  margin: 0;
+}
 nav{
   background: #DDDDDD;
-  position: fixed;
+  position: absolute;
   right: 10%;
   top: 0;
   padding: 0 1em 0.25em 1em;
@@ -131,6 +134,10 @@ h2{
   -moz-box-shadow: inset 0 0 9px -3px #000;
   -webkit-box-shadow: inset 0 0 9px -3px #000;
   box-shadow: inset 0 0 9px -3px #000;
+}
+
+.chat_window::-webkit-scrollbar {
+  display: none;
 }
 
 .chat_input{

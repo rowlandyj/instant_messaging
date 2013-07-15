@@ -1,26 +1,23 @@
-$(function() {
-  // create new pusher
-  var pusher = new Pusher('689254ed9305f00ed841')
+$(function(){
+  var ENTER = 13;
+  var socket = new WebSocket('ws://tie-fighter.local:8090');
+  var chatLog = $('.chat_window')
 
-  // set default channel
-  var flizzychat = pusher.channel('flizzychat')
+  socket.onmessage = function(event){
+    chatLog.append($('<p>' + event.data + '</p>'))
+    console.log(event.data);
+    chatLog.animate({scrollTop: chatLog.height()}, 1000)
 
-  // check for overages
-  pusher.connection.bind( 'error', function( err ) {
-    if( err.data.code === 4004 ) {
-      log('>>> detected limit error');
+  };
+
+  $('.chat_input').keypress(function(event){
+    var el = $(this);
+
+    if (event.which == ENTER){
+      socket.send(el.val());
+      el.val('');
     }
   });
 
-  // show connection status in status div
-  pusher.connection.bind('state_change', function(states) {
-    $('div#status').text("Pusher's current state is " + states.current);
-  });
-
-  // method for debugging message send
-  pusher.channel('flizzychat').bind('my-event', function(data) {
-    alert('An event was triggered with message: ' + data.message);
-  });
 
 });
-// should refactor some methods to run before document.ready
